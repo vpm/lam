@@ -1,0 +1,16 @@
+dn: cn=dhcpServer,dc=my-domain,dc=com
+cn: dhcpServer
+dhcpservicedn: cn=dhcpConfig,dc=my-domain,dc=com
+objectclass: dhcpServer
+objectclass: top
+
+dn: cn=dhcpConfig,dc=my-domain,dc=com
+cn: dhcpConfig
+dhcpoption: domain-name ""
+dhcpoption: netbios-node-type 8
+dhcpprimarydn: cn=dhcpServer,dc=my-domain,dc=com
+dhcpstatements: ddns-update-style interim
+dhcpstatements: update-static-leases true
+objectclass: dhcpService
+objectclass: top
+objectclass: dhcpOptions
